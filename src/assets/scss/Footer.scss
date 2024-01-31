@@ -1,0 +1,30 @@
+@import "./Variables.scss";
+
+.list-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background-color: $Very_Dark_Desaturated_Blue;
+    border-radius: 0 0 5px 5px;
+    font-size: 0.875rem;
+    color: $Darker_Grayish_Blue;
+
+    form,
+    fieldset {
+        border: 0;
+        outline: 0;
+        display: flex;
+        gap: 5px;
+
+        input[type=radio] {
+            -webkit-appearance: none;
+        }
+    }
+
+    button {
+        font-size: 0.875rem;
+        color: $Darker_Grayish_Blue;
+    }
+}

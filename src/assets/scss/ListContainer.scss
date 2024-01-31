@@ -1,0 +1,11 @@
+@import "./Variables.scss";
+
+.list-body {
+    width: 100%;
+    background-color: $Very_Dark_Desaturated_Blue;
+    border-radius: 5px 5px 0 0;
+
+    .todo-list {
+        list-style: none;
+    }
+}

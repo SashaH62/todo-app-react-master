@@ -1,0 +1,40 @@
+@import "./Variables.scss";
+
+.list-item {
+    padding: 1.325rem 2rem;
+    color: $Light_Grayish_Blue;
+    border-bottom: 1px solid $Very_Dark_Grayish_Blue;
+    display: flex;
+    align-items: center;
+    transition: .2s ease-in-out all;
+
+    &::before {
+        content: "";
+        display: block;
+        height: 30px;
+        width: 30px;
+        border: 1px solid $Very_Dark_Grayish_Blue;
+        border-radius: 100%;
+        margin-right: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover {
+        color: $Light_Grayish_Blue_Hover;
+        cursor: pointer;
+    }
+
+    &.completed {
+        p {
+            text-decoration: line-through;
+            color: $Darker_Grayish_Blue;
+        }
+
+        &::before {
+            content: url('../images/icon-check.svg');
+            background: $background_grad;
+        }
+    }
+}
