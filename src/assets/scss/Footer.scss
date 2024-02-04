@@ -18,6 +18,19 @@
         display: flex;
         gap: 5px;
 
+        label {
+            transition: .3s ease-in-out all;
+
+            &.active {
+                color: $Light_Grayish_Blue_Hover;
+            }
+            
+            &:hover {
+                color: $Light_Grayish_Blue_Hover;
+                cursor: pointer;
+            }
+        }
+
         input[type=radio] {
             -webkit-appearance: none;
         }
