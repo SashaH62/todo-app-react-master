@@ -26,7 +26,7 @@
     color: var(--font-color);
 
     &::placeholder {
-      color: var(--completed-font-color);
+      color: var(--placeholder-color);
     }
 
     @media (max-width: $mobile) {
