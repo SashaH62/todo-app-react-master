@@ -10,7 +10,7 @@ export const ListContainer = ({
   return (
     <section className="list-body">
       <ul className="todo-list">
-        {todoItems.map((el, index) => (
+        {todoItems.map((el) => (
           <ListItem
             item={el}
             onSetCompleted={setTodoitems}

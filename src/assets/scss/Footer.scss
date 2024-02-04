@@ -6,38 +6,15 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 2rem;
-    background-color: $Very_Dark_Desaturated_Blue;
+    background-color: var(--container-background-color);
     border-radius: 0 0 5px 5px;
     font-size: 0.875rem;
-    color: $Darker_Grayish_Blue;
-
-    form,
-    fieldset {
-        border: 0;
-        outline: 0;
-        display: flex;
-        gap: 5px;
-
-        label {
-            transition: .3s ease-in-out all;
-
-            &.active {
-                color: $Light_Grayish_Blue_Hover;
-            }
-            
-            &:hover {
-                color: $Light_Grayish_Blue_Hover;
-                cursor: pointer;
-            }
-        }
-
-        input[type=radio] {
-            -webkit-appearance: none;
-        }
-    }
+    color: var(--completed-font-color);
+    transition: .3s ease-in-out all;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 
     button {
         font-size: 0.875rem;
-        color: $Darker_Grayish_Blue;
+        color: var(--completed-font-color);
     }
 }

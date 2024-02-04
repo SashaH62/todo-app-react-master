@@ -84,28 +84,30 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <section className="header">
-        <h1>TODO</h1>
-        <img
-          src={isDark ? DarkIcon : LightIcon}
-          alt={isDark ? "Dark Mode Icon" : "Light Mode Icon"}
-          onClick={handleDarkModeToggle}
+    <div className={`App ${isDark ? "dark" : "light"}`}>
+      <div className="app-container">
+        <section className="header">
+          <h1>TODO</h1>
+          <img
+            src={isDark ? DarkIcon : LightIcon}
+            alt={isDark ? "Dark Mode Icon" : "Light Mode Icon"}
+            onClick={handleDarkModeToggle}
+          />
+        </section>
+        <CreateTask onAddItem={handleAddItem} />
+        <ListContainer
+          todoItems={filteredList}
+          setTodoItems={setListItems}
+          onToggleCompleted={handleToggleCompleted}
+          onDeleteItem={handleDeleteItem}
         />
-      </section>
-      <CreateTask onAddItem={handleAddItem} />
-      <ListContainer
-        todoItems={filteredList}
-        setTodoItems={setListItems}
-        onToggleCompleted={handleToggleCompleted}
-        onDeleteItem={handleDeleteItem}
-      />
-      <Footer
-        todoItems={listItems}
-        currFilter={currFilter}
-        onChangeFilter={setCurrFilter}
-        onClearCompleted={handleClearCompleted}
-      />
+        <Footer
+          todoItems={listItems}
+          currFilter={currFilter}
+          onChangeFilter={setCurrFilter}
+          onClearCompleted={handleClearCompleted}
+        />
+      </div>
     </div>
   );
 }
